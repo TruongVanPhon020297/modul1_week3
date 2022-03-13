@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="Show()">
+        Chơi
+    </button>
+    <script>
+       function Show(){
+           alert("Nhập vào khoảng muốn đoán");
+           do {
+                var value_1 = parseInt(prompt("Bắt đầu của khoảng"));
+                var value_2 = parseInt(prompt("Kết thúc của khoảng"));
+           } while (value_1 > value_2 || value_1 < 0 || value_2 < 0);
+            var count = 0;
+            let value_random = Math.floor(Math.random()*(value_2 - value_1 + 1)) + value_1;
+            let value_guess = parseInt(prompt("Nhập vào số cần dự đoán"));
+           while(count <= 2){
+               if(value_guess == value_random){
+                   alert("Random = " + value_random + " số của bạn dự đoán là " + value_guess + " Chúc mừng bạn đã đoán trúng");
+                   console.log("Random = " + value_random + " Guess = " + value_guess);
+                   break;
+               }
+               if(value_guess < value_random){
+                    alert("Random = " + value_random + " lớn hơn số mà bạn dự đoán là " + value_guess);
+                    console.log("Random = " + value_random + " Guess = " + value_guess);
+                    value_guess = parseInt(prompt("Nhập vào lại số cần dự đoán"));
+                    count ++;
+               }
+               if(value_guess > value_random){
+                alert("Random = " + value_random + " nhỏ hơn số mà bạn dự đoán là " + value_guess);
+                    console.log("Random = " + value_random + " Guess = " + value_guess);
+                    value_guess = parseInt(prompt("Nhập vào lại số cần dự đoán"));
+                    count ++;
+               }
+               if(count == 2){
+                    if(value_guess > value_random){
+                        alert("Random = " + value_random + " nhỏ hơn số mà bạn dự đoán là " + value_guess);
+                    }
+                    if(value_guess < value_random){
+                        alert("Random = " + value_random + " lớn hơn số mà bạn dự đoán là " + value_guess);
+                    }
+                   alert("Bạn đã chọn đủ 3 lần chơi chúc bạn may mắn lần sau");
+                   console.log("Random = " + value_random + " Guess = " + value_guess);
+                   break;
+               }
+           }
+       }
+    </script>
+</body>
+</html>

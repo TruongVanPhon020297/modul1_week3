@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let f0 = 0;
+        let f1 = 1;
+        let fn;
+        let i;
+        let result = 0;
+            for( i = 2 ; i <= 20 ; i++){
+                fn = f0 + f1;
+                f0 = f1;
+                f1 = fn;
+                result += fn ;
+            }
+        alert("Tổng của 20 số Fibo đầu tiên trong dãy Fibo là : " + result);
+    </script>
+</body>
+</html>

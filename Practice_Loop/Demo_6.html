@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let Sum_Value = 0;
+        let count = 0;
+        let numbers = 7;
+        let check = 0;
+        while(1){
+            if(numbers % 7 == 0){
+                check = 1;
+            }
+            if(check == 1){
+                Sum_Value = Sum_Value + numbers;
+                count++;
+            }
+            if( count == 30){
+                break;
+            }
+            numbers = numbers + 7;
+        }
+        alert("Tổng của 30 số đầu tiên chia hết cho 7 là : " + Sum_Value);
+    </script>
+</body>
+</html>
