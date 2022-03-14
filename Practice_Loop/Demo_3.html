@@ -13,7 +13,7 @@
         let f1 = 1;
         let fn;
         let i;
-        let result = " ";
+        let result = "0 1 ";
         do{
             var numbers = parseInt(prompt("Nhập vào số lượng số Fibo cần hiển thị"));
         }while(numbers < 0 || numbers > 20);
@@ -28,7 +28,7 @@
                 fn = f0 + f1;
                 f0 = f1;
                 f1 = fn;
-                result += fn + "-->";
+                result = result + fn + " ";
             }
         }
         alert("Số lượng số lượng số Fibo cần hiển thị là : " + result);
