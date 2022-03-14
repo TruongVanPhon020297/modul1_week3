@@ -8,16 +8,22 @@
 </head>
 <body>
     <script>
-        let temperature = parseFloat(prompt("Nhập vào nhiệt độ hiện tại"));
-        if(temperature < 20){
-            alert("Đề nghị Tăng nhiệt độ");
-        }else{
+        var temperature = parseFloat(prompt("Nhập vào nhiệt độ hiện tại"));
+        while(1){
+            if(temperature < 20){
+                alert("Đề nghị Tăng nhiệt độ");
+                temperature = parseFloat(prompt("Nhập vào nhiệt độ cần tăng"));
+            }
             if(temperature > 100){
                 alert("Đề nghị Giảm nhiệt độ");
-            }else {
+                temperature = parseFloat(prompt("Nhập vào nhiệt độ cần giảm"));
+            }
+            if(temperature >= 20 && temperature <= 100){
                 alert("Nhiệt độ vừa phải");
+                break;
             }
         }
+        
     </script>
 </body>
 </html>
