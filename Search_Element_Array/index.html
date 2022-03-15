@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numbers = [0,2,4,6,8,10];
+        let value_input = parseFloat(prompt("Nhập vào giá trị cần tìm"));
+        let index,i,flag = 0;
+        for(i = 1 ; i < numbers.length ; i++){
+            if(value_input == numbers[i]){
+                flag = 1;
+                index = i;
+            }
+        }
+        if(flag == 1){
+            alert("Phần tử thứ " + (index + 1) + " có giá trị bằng với giá trị nhập vào");
+        }else {
+            alert("Không có phần tử nào của mảng bằng giá trị nhập vào");
+        }
+    </script>
+</body>
+</html>
