@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numbers = [-2,-1,0,1,2,3,4,5];
+        let first = 0;
+        let last = numbers.length - 1;
+        let temp;
+        let result1 = " ";
+        for(j = 0 ; j < numbers.length ; j++){
+            result1 += numbers[j] + " ";
+        }
+        alert("Giá trị của mảng ban đầu có các giá trị là : " + result1);
+        while(1){
+            temp = numbers[first];
+            numbers[first] = numbers[last];
+            numbers[last] = temp;
+            if(first >= last){
+                break;
+            }
+            first++;
+            last--;
+        }
+        let result = " ";
+        for(i = 0 ; i < numbers.length ; i++){
+            result += numbers[i] + " ";
+        }
+        alert("Giá trị của mảng sau khi thay đổi là : " + result);
+    </script>
+</body>
+</html>
