@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let row;
+        let col;
+        for(row = 0 ; row < 6; row++){
+            for(col = 0; col < 7 ; col++){
+                if(row == 0 && col % 3 != 0|| row == 1 && col % 3 == 0|| row - col == 2 || row + col == 8){
+                    document.write("0");
+                }else {
+                    document.write("&nbsp;&nbsp;");
+                }
+            }
+            document.write("</br>");
+        }
+    </script>
+</body>
+</html>
