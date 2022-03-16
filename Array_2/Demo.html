@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Caro Game Simple</h3>
+    <p id="carogame"></p>
+    <input type="button" value="Change Value" onclick="changeValue()">
+    <script>
+        let Array_caro = [];
+        let data = "";
+        let i,j,k;
+        for(k = 0 ; k < 5; k++){
+            Array_caro[k] = [0,0,0,0,0];
+        }
+        for(i = 0 ; i < 5 ; i++){
+            data += "</br>";
+            for(j = 0 ; j < 5 ; j++){
+                data += Array_caro[i][j] + "&nbsp;&nbsp;&nbsp;";
+            }
+        }
+        let caro = document.getElementById("carogame");
+        caro.innerHTML = data;
+
+        function changeValue() {
+            let value_row = parseInt(prompt("Nhập vào chỉ số hàng"));
+            let value_col = parseInt(prompt("Nhập vào chỉ số cột"));
+            Array_caro[value_row][value_col] = "x";
+            let data_change = "";
+            let i_change,j_change;
+            for(i_change = 0 ; i_change < 5 ; i_change++){
+                data_change += "</br>";
+                for(j_change = 0 ; j_change < 5; j_change++){
+                    data_change += Array_caro[i_change][j_change] + "&nbsp;&nbsp;&nbsp;";
+                }
+            }
+            caro.innerHTML = data_change;
+        }
+    </script>
+</body>
+</html>
