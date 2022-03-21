@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numbers = [9,8,7,6,5];
+        let v_input = Number(prompt("Nhập vào v"));
+        for(let i = 0 ; i < numbers.length;i++){
+            if(v_input == numbers[i]){
+                numbers[i] = 0;
+                for(let j = i ; j < numbers.length ; j++){
+                    numbers[j] = numbers[j+1];
+                }
+                numbers[numbers.length-1] = 0;
+            }
+        }
+        alert(numbers);
+    </script>
+</body>
+</html>

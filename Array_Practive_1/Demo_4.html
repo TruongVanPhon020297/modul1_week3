@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let Lenght_Array = parseInt(prompt("Nhập vào chiều dài của mảng"));
+        let Array_Value = []
+        for(i = 0 ; i < Lenght_Array; i ++){
+            Array_Value[i] = parseInt(prompt(`Nhập vào giá trị thứ ${i} của mảng`));
+        }
+        let temp ;
+        for(let i = 0;i < Array_Value.length/2; i++){
+            temp = Array_Value[i];
+            Array_Value[i] = Array_Value[Array_Value.length - i -1];
+            Array_Value[Array_Value.length - i -1] = temp;
+        }
+        let result = " " ;
+        for( i = 0 ; i < Array_Value.length ; i++){
+            result += Array_Value[i] + " ";
+        }
+        alert(result);
+    </script>
+</body>
+</html>
