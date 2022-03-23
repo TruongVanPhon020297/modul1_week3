@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let value_input = prompt("Nhập vào chuỗi cần kiểm tra");
+        alert(isPalindrome(value_input));
+        function isPalindrome(_string){
+            let arr = _string.split("");
+            let Array_Value = _string.split("");
+            for(let i = 0;i < Array_Value.length/2; i++){
+                temp = Array_Value[i];
+                Array_Value[i] = Array_Value[Array_Value.length - i -1];
+                Array_Value[Array_Value.length - i -1] = temp;
+            }
+            for(let i = 0 ; i < Array_Value.length ; i++){
+                if(arr[i] != Array_Value[i]){
+                    return false;
+                }
+            }
+            return true;
+        }  
+    </script>
+</body>
+</html>
